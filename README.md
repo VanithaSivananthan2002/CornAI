@@ -121,56 +121,6 @@ CornAI/
 │
 └── README.md
 
-🚀 Installation and Setup
-
-1. Clone the Repository
-
-git clone https://github.com/Aasik2002/corn-v1-.git
-cd corn-v1-
-
-2. Setup Frontend
-
-cd frontend
-npm install
-npm run dev
-
-3. Setup Backend
-
-Open another terminal:
-
-cd backend
-npm install
-npm run dev
-
-Configure the required environment variables in the backend .env file before starting the backend.
-
-4. Setup Machine Learning API
-
-Open another terminal:
-
-cd ml_service
-python -m venv venv
-
-Activate the virtual environment on Windows:
-
-.\venv\Scripts\Activate
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Start the FastAPI service:
-
-uvicorn main:app --reload
-
-API documentation:
-
-http://127.0.0.1:8000/docs
-
-📊 Dataset
-
-The project uses a corn leaf disease image dataset containing images from different disease categories. The images are used to train and evaluate the machine learning model.
-
 🔮 Future Improvements
 
 Improve model prediction accuracy.

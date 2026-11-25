@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Reset default Vite layout centering */
+  #root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom Glassmorphism Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+}
+
+.glass-input {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-input::placeholder {
+  color: #64748b;
+}
+
+.glass-input:focus {
+  background: #ffffff;
+  border-color: #10B981;
+  outline: none;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.auth-page {
+  background-color: #e8f1df;
+  background-image:
+    linear-gradient(110deg, rgba(248, 250, 252, 0.3), rgba(248, 250, 252, 0.08)),
+    url('/backgroung%20image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+[class~="bg-[#0E1611]"],
+[class~="bg-[#0E1611]/75"],
+[class~="bg-[#0E1611]/60"] {
+  background-color: #f8fafc;
+}
+
+[class~="bg-emerald-950/5"],
+[class~="bg-emerald-950/10"],
+[class~="bg-emerald-950/20"],
+[class~="bg-emerald-950/40"],
+[class~="bg-emerald-950/60"],
+[class~="bg-emerald-950/80"] {
+  background-color: #f1f5f9;
+}
+
+[class~="bg-white/5"] {
+  background-color: #f8fafc;
+}
+
+[class~="bg-white/10"] {
+  background-color: #f1f5f9;
+}
+
+[class~="hover:bg-white/5"]:hover {
+  background-color: #f1f5f9;
+}
+
+[class~="hover:bg-white/10"]:hover {
+  background-color: #e2e8f0;
+}
+
+[class*="border-white/"] {
+  border-color: #e2e8f0;
+}
+
+[class~="border-emerald-950/80"],
+[class~="border-[#263e2e]"],
+[class~="border-[#263e2e]/60"] {
+  border-color: #cbd5e1;
+}
+
+.text-white,
+.text-slate-100,
+.text-slate-200,
+.text-slate-300 {
+  color: #1e293b;
+}
+
+.text-slate-400,
+.text-slate-500 {
+  color: #64748b;
+}
+
+.text-emerald-300,
+.text-emerald-400,
+.text-emerald-500 {
+  color: #047857;
+}
+
+[class~="text-[#84CC16]"] {
+  color: #047857;
+}
+
+[class*="bg-[#008A2E]"].text-white,
+.bg-rose-600.text-white,
+.bg-rose-700.text-white,
+.bg-emerald-500.text-white,
+.bg-emerald-600.text-white {
+  color: #ffffff;
+}
+
+.border-t-white {
+  border-top-color: #047857;
+}
+
+/* Real-time Scanning HUD effects */
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #10B981, #84CC16, #10B981, transparent);
+  box-shadow: 0 0 15px #10B981, 0 0 30px #84CC16;
+  animation: scan 3.5s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* Pulsing effect for targeted disease areas */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.pulse-target {
+  position: relative;
+}
+
+.pulse-target::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid #EF4444;
+  border-radius: 8px;
+  animation: pulse-ring 2s infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

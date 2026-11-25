@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+venv/
+
+# Uploaded images
+backend/uploads/
+
+# Environment secrets
+.env
+.env.local
+
+# Backup files
+
+
+
+
+
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Uploaded images
+backend/uploads/
+
+# Environment files
+.env
+.env.local
+
+# Backup files
+package-lock-backup.json
+
+# Logs
+*.log
+npm-debug.log*

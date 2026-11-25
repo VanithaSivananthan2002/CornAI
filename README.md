@@ -92,35 +92,6 @@ Delete prediction history by week, month, or all records
 
 Update user profile
 
-🏗️ System Architecture
-
-CornAI consists of three main components:
-
-Frontend: Provides the user interface for uploading images and viewing prediction results.
-
-Backend: Handles user authentication, database operations, prediction requests, and communication between system components.
-
-Machine Learning API: Processes uploaded images and uses the trained CNN model to predict corn leaf disease categories.📂 Project Structure
-
-CornAI/
-│
-├── frontend/
-│   ├── src/
-│   └── package.json
-│
-├── backend/
-│   ├── index.js
-│   ├── routes/
-│   ├── models/
-│   └── package.json
-│
-├── ml_service/
-│   ├── main.py
-│   ├── Pro_Corn_Model.h5
-│   └── requirements.txt
-│
-└── README.md
-
 🔮 Future Improvements
 
 Improve model prediction accuracy.
